@@ -45,8 +45,8 @@ class WaybarController:
         with open(self.waybar_path, 'w', encoding='utf-8') as file:
             file.write(config_data)
 
-        subprocess.run('pkill waybar', stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, shell=True)
-        subprocess.run('hyprctl dispatch exec waybar', stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, shell=True)
+        # subprocess.run('pkill waybar', stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, shell=True)
+        # subprocess.run('hyprctl dispatch exec waybar', stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, shell=True)
 
 
 
