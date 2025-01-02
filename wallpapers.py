@@ -1,4 +1,5 @@
 import random
+import subprocess
 import os
 import re
 
@@ -40,8 +41,8 @@ class WallpaperController:
         with open(self.hyprpaper_path, 'w') as file:
             file.write(config_data)
 
-        os.system('pkill hyprpaper')
-        os.system('hyprpaper &')
+        subprocess.run('pkill hyprpaper', stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, shell=True)
+        subprocess.run('hyprpaper &', stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, shell=True)
 
 if __name__ == "__main__":
     cntrl = WallpaperController('/home/wzqrxzd/Wallpapers', '-1') 
